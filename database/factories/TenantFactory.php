@@ -20,7 +20,7 @@ class TenantFactory extends Factory
         return [
             'user_id' => User::factory(),
             'name' => 'Business Two',
-            'domain' => $this->faker->unique()->word() . '.timewellbooked.test'
+            'domain' => $this->faker->unique()->word() . '.auraschedule.test'
         ];
     }
 }
