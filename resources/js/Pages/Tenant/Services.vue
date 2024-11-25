@@ -1,4 +1,10 @@
 <template>
+
+
+
+
+
+
     <div>
         <!-- Tenant Header -->
         <TenantHeader
