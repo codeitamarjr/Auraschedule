@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('business_account')->default(false); // Flag for business account
             $table->rememberToken();
             $table->timestamps();
         });

@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'business_account',
     ];
 
     /**
@@ -45,6 +46,11 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function businessDetails()
+    {
+        return $this->hasOne(BusinessDetail::class);
     }
 
     public function tenants(): HasMany
