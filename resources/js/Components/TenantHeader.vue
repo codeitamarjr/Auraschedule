@@ -1,5 +1,5 @@
 <template>
-    <header class="bg-white shadow-sm ring-1 ring-gray-900/5">
+    <header class="bg-white">
         <div class="relative overflow-hidden bg-white">
             <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
                 <div
@@ -38,7 +38,7 @@
                                                 class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100"
                                             >
                                                 <img
-                                                    src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                                                    src="https://cdn.pixabay.com/photo/2016/08/11/02/23/massage-therapy-1584711_1280.jpg"
                                                     alt=""
                                                     class="size-full object-cover"
                                                 />
@@ -47,38 +47,7 @@
                                                 class="h-64 w-44 overflow-hidden rounded-lg"
                                             >
                                                 <img
-                                                    src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
-                                                    alt=""
-                                                    class="size-full object-cover"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div
-                                            class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8"
-                                        >
-                                            <div
-                                                class="h-64 w-44 overflow-hidden rounded-lg"
-                                            >
-                                                <img
-                                                    src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
-                                                    alt=""
-                                                    class="size-full object-cover"
-                                                />
-                                            </div>
-                                            <div
-                                                class="h-64 w-44 overflow-hidden rounded-lg"
-                                            >
-                                                <img
-                                                    src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
-                                                    alt=""
-                                                    class="size-full object-cover"
-                                                />
-                                            </div>
-                                            <div
-                                                class="h-64 w-44 overflow-hidden rounded-lg"
-                                            >
-                                                <img
-                                                    src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                                                    src="https://cdn.pixabay.com/photo/2022/07/06/12/04/candles-7304948_1280.jpg"
                                                     alt=""
                                                     class="size-full object-cover"
                                                 />
@@ -91,7 +60,7 @@
                                                 class="h-64 w-44 overflow-hidden rounded-lg"
                                             >
                                                 <img
-                                                    src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                                                    src="https://cdn.pixabay.com/photo/2014/12/13/18/27/woman-567021_1280.jpg"
                                                     alt=""
                                                     class="size-full object-cover"
                                                 />
@@ -100,7 +69,38 @@
                                                 class="h-64 w-44 overflow-hidden rounded-lg"
                                             >
                                                 <img
-                                                    src="https://tailwindui.com/plus/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                                                    src="https://cdn.pixabay.com/photo/2019/09/16/17/18/spa-4481538_1280.jpg"
+                                                    alt=""
+                                                    class="size-full object-cover"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-64 w-44 overflow-hidden rounded-lg"
+                                            >
+                                                <img
+                                                    src="https://cdn.pixabay.com/photo/2022/09/13/21/47/massage-7452918_1280.jpg"
+                                                    alt=""
+                                                    class="size-full object-cover"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8"
+                                        >
+                                            <div
+                                                class="h-64 w-44 overflow-hidden rounded-lg"
+                                            >
+                                                <img
+                                                    src="https://cdn.pixabay.com/photo/2022/09/13/21/47/massage-7452918_1280.jpg"
+                                                    alt=""
+                                                    class="size-full object-cover"
+                                                />
+                                            </div>
+                                            <div
+                                                class="h-64 w-44 overflow-hidden rounded-lg"
+                                            >
+                                                <img
+                                                    src="https://cdn.pixabay.com/photo/2023/11/14/23/01/beauty-8388840_1280.jpg"
                                                     alt=""
                                                     class="size-full object-cover"
                                                 />
