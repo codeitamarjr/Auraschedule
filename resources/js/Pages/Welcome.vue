@@ -202,17 +202,19 @@ function handleImageError() {
                 <!-- End Hero -->
             </main>
         </div>
-        <!-- Footer -->
-        <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-            Crafted with ❤️ by
-            <a
-                href="https://itjunior.dev/"
-                target="_blank"
-                rel="noopener"
-                class="text-blue-500 hover:underline"
-                >Itamar Junior</a
-            >
-        </footer>
-        <!-- End Footer -->
     </div>
+    <!-- Footer -->
+    <footer
+        class="sticky bottom-0 text-center text-sm text-gray-500 dark:text-white/70"
+    >
+        Crafted with ❤️ by
+        <a
+            href="https://itjunior.dev/"
+            target="_blank"
+            rel="noopener"
+            class="text-blue-500 hover:underline"
+            >Itamar Junior</a
+        >
+    </footer>
+    <!-- End Footer -->
 </template>
