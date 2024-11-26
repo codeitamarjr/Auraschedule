@@ -4,22 +4,14 @@ import { Head, Link } from "@inertiajs/vue3";
 defineProps<{
     canLogin?: boolean;
     canRegister?: boolean;
-    laravelVersion: string;
-    phpVersion: string;
+    totalUsers?: number;
 }>();
-
-function handleImageError() {
-    document.getElementById("screenshot-container")?.classList.add("!hidden");
-    document.getElementById("docs-card")?.classList.add("!row-span-1");
-    document.getElementById("docs-card-content")?.classList.add("!flex-row");
-    document.getElementById("background")?.classList.add("!hidden");
-}
 </script>
 
 <template>
     <Head title="Welcome to Auraschedule" />
     <div
-        class="relative flex min-h-screen flex-col items-center justify-center selection:bg-indigo-500 selection:text-white"
+        class="relative flex min-h-screen flex-col items-center justify-center selection:bg-indigo-500 selection:text-white dark:bg-gray-900"
     >
         <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
             <header
@@ -107,7 +99,9 @@ function handleImageError() {
                                         >
                                             <span
                                                 class="text-xs font-medium leading-none text-white uppercase"
-                                                >7k+</span
+                                                >{{
+                                                    $page.props.totalUsers
+                                                }}+</span
                                             >
                                         </span>
                                     </div>
@@ -118,12 +112,17 @@ function handleImageError() {
                                     <div
                                         class="text-lg font-semibold text-gray-800 dark:text-neutral-200"
                                     >
-                                        Trust pilot
+                                        Join over
+                                        <span class="text-blue-500"
+                                            >{{ $page.props.totalUsers }}+</span
+                                        >
+                                        users
                                     </div>
                                     <div
                                         class="text-sm text-gray-500 dark:text-neutral-500"
                                     >
-                                        Rated best over 37k reviews
+                                        Auraschedule is the best way to manage
+                                        your bookings and appointments.
                                     </div>
                                 </div>
                             </div>

@@ -25,15 +25,14 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
+        'totalUsers' => \App\Models\User::count() + 50,
     ]);
 });
 
 
 Route::get('/dashboard', function () {
     $user = Auth::user();
-    return Inertia::render('Dashboard',[
+    return Inertia::render('Dashboard', [
         'isBusinessAccount' => $user->business_account,
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
