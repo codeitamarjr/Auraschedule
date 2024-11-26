@@ -48,9 +48,9 @@ class User extends Authenticatable
         ];
     }
 
-    public function businessDetails()
+    public function business()
     {
-        return $this->hasOne(BusinessDetail::class);
+        return $this->hasOne(Business::class);
     }
 
     public function tenants(): HasMany
