@@ -164,12 +164,9 @@ function handleImageError() {
                                                 type="email"
                                                 id="hs-hero-email-1"
                                                 class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                                placeholder="Your name"
+                                                placeholder="Your email"
                                             />
                                         </div>
-                                        <div
-                                            class="pt-2 sm:pt-0 sm:ps-3 border-t border-gray-200 sm:border-t-0 sm:border-s w-full dark:border-neutral-700"
-                                        ></div>
                                         <div
                                             class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block"
                                         >
