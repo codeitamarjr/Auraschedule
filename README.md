@@ -1,5 +1,7 @@
 # Auraschedule
 
+![Landing Page](https://github.com/codeitamarjr/AuraSchedule/blob/main/public/landing-page.png?raw=true)
+
 ## About Auraschedule
 
 Auraschedule is a robust scheduling and subscription platform built using Laravel 11 and Vue.js 3 with TypeScript. This application supports multi-tenancy, subscription-based plans, and service bookings, catering to businesses of all sizes.
