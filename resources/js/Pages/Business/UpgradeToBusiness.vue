@@ -29,7 +29,7 @@ const submit = () => {
 
         <div class="py-12">
             <div
-                class="max-w-4xl mx-auto bg-white shadow-md rounded-md p-6 dark:bg-gray-800"
+                class="max-w-4xl mx-auto bg-white shadow-md rounded-md p-6 dark:bg-gray-800 dark:text-gray-300"
             >
                 <h1 class="text-2xl font-bold mb-6">
                     Upgrade to Business Account

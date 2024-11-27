@@ -46,6 +46,13 @@ const showingNavigationDropdown = ref(false);
                                 >
                                     My Business
                                 </NavLink>
+                                <NavLink
+                                    v-if="$page.props.auth.user.hasBusiness"
+                                    :href="route('business.subscription')"
+                                    :active="route().current('business.subscription')"
+                                >
+                                    Subscription
+                                </NavLink>
                             </div>
                         </div>
 

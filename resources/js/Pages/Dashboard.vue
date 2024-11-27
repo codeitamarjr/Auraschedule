@@ -4,6 +4,7 @@ import { Head } from "@inertiajs/vue3";
 
 interface Props {
     isBusinessAccount: boolean;
+    isSubscribed: boolean;
 }
 
 const props = defineProps<Props>();
@@ -40,13 +41,19 @@ const props = defineProps<Props>();
             </div>
         </template>
 
-        <div class="py-12">
+        <div class="py-12" v-if="isSubscribed">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
                 <div
                     class="overflow-hidden bg-white shadow-sm sm:rounded-lg dark:bg-gray-800"
                 >
                     <div class="p-6 text-gray-900 dark:text-gray-100">
-                        You're logged in!
+                        You have a valid subscription.
+                        <span
+                            v-if="!isBusinessAccount"
+                            class="block mt-2 text-sm text-gray-500 dark:text-gray-400"
+                        >
+                            To use the Business Dashboard, please upgrade to a Business Account.
+                        </span>
                     </div>
                 </div>
             </div>

@@ -2,17 +2,14 @@
 
 use Inertia\Inertia;
 use App\Models\Tenant;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
 use Spatie\Multitenancy\Contracts\IsTenant;
 
 Route::get('/', function () {
+    $tenant = app(IsTenant::class)::current();
 
-    $tenant = (app(IsTenant::class)::current());
-
-    if (app(IsTenant::class)::current()) {
+    if ($tenant) {
         // If a tenant exists, show the tenant's service page
         $tenant = Tenant::where('id', $tenant->id)->with('user', 'services')->first();
         return Inertia::render('Tenant/Services', [
@@ -31,9 +28,9 @@ Route::get('/', function () {
 
 
 Route::get('/dashboard', function () {
-    $user = Auth::user();
     return Inertia::render('Dashboard', [
-        'isBusinessAccount' => $user->business_account,
+        'isBusinessAccount' => auth()->user()->business_account,
+        'isSubscribed' => auth()->user()->subscribed('prod_RIRj2SHTliuf4P'),
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 

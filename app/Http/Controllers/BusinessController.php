@@ -15,6 +15,28 @@ class BusinessController extends Controller
         return Inertia::render('Business/UpgradeToBusiness');
     }
 
+    public function showSubscription()
+    {
+        $user = Auth::user();
+
+        return Inertia::render('Business/Subscription', [
+            'plan1' => route('business.checkout', 'price_1QPqprRsKfqiLeFXSsztcoLV'),
+            'plan2' => route('business.checkout', 'price_1QPqprRsKfqiLeFXJqiZFtrd'),
+            'plan3' => route('business.checkout', 'price_1QPqprRsKfqiLeFXD7HKFwq0'),
+            'isSubscribed' => $user->subscribed('prod_RIRj2SHTliuf4P'),
+        ]);
+    }
+
+    public function showSuccess()
+    {
+        return Inertia::render('Business/Success');
+    }
+
+    public function showCancel()
+    {
+        return Inertia::render('Business/Cancel');
+    }
+
     public function upgrade(Request $request)
     {
         $user = $request->user();
