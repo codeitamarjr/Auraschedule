@@ -1,6 +1,7 @@
 # Auraschedule
 
-![Landing Page](https://github.com/codeitamarjr/AuraSchedule/blob/main/public/landing-page.png?raw=true)
+![Auraschedule](./public/landing-page-dark.png#gh-dark-mode-only)
+![Auraschedule](./public/landing-page-light.png#gh-light-mode-only)
 
 ## About Auraschedule
 
