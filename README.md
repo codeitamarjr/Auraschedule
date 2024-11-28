@@ -35,9 +35,9 @@ Auraschedule is a robust scheduling and subscription platform built using Larave
 - MariaDB or SQLite
 - Stripe Account (for payment processing)
 
-### Setting Up Environment
+### Setting Up Stripe Environment Variables
 
-1. Clone the repository and install dependencies:
+Edit the `.env` file in the project root directory and add the following environment variables:
 
 ```bash
 STRIPE_KEY=your-stripe-public-key
@@ -72,6 +72,10 @@ The frontend is built using Vue.js 3 with TypeScript and Inertia.js. The fronten
 - `resources/js/Pages`: Contains Vue components for each page.
 - `resources/js/Layouts`: Shared layout components (e.g., AuthenticatedLayout.vue).
 - `resources/js/Components`: Reusable Vue components.
+
+#### Compiling Assets
+
+Run `npx vite build` to compile the frontend assets.
 
 ## Contribution
 
