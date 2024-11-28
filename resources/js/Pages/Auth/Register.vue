@@ -4,11 +4,13 @@ import InputError from '@/Components/InputError.vue';
 import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
-import { Head, Link, useForm } from '@inertiajs/vue3';
+import { Head, Link, useForm, usePage } from '@inertiajs/vue3';
+
+const { name, email } = usePage().props;
 
 const form = useForm({
-    name: '',
-    email: '',
+    name: name || '',
+    email: email || '',
     password: '',
     password_confirmation: '',
 });

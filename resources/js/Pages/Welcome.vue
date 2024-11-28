@@ -1,11 +1,16 @@
 <script setup lang="ts">
 import { Head, Link } from "@inertiajs/vue3";
+import { ref } from "vue";
 
 defineProps<{
     canLogin?: boolean;
     canRegister?: boolean;
     totalUsers?: number;
 }>();
+
+// State for name and email
+const name = ref("");
+const email = ref("");
 </script>
 
 <template>
@@ -143,6 +148,7 @@ defineProps<{
                                                 ></label
                                             >
                                             <input
+                                                v-model="name"
                                                 type="text"
                                                 id="hs-hero-name-1"
                                                 class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
@@ -160,6 +166,7 @@ defineProps<{
                                                 ></label
                                             >
                                             <input
+                                                v-model="email"
                                                 type="email"
                                                 id="hs-hero-email-1"
                                                 class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
@@ -171,7 +178,7 @@ defineProps<{
                                         >
                                             <a
                                                 v-if="canRegister"
-                                                :href="route('register')"
+                                                :href="route('register', { name: name, email: email })"
                                                 class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                                             >
                                                 Get started
