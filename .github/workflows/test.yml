@@ -58,7 +58,7 @@ jobs:
 
       # Step 8: Build Assets
       - name: Build Frontend Assets
-        run: npm run build
+        run: npx vite build
 
       # Step 9: Set up the .env file
       - name: Set up Environment
