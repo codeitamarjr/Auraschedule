@@ -137,7 +137,7 @@ const email = ref("");
                             <div v-if="!$page.props.auth.user">
                                 <form>
                                     <div
-                                        class="mx-auto max-w-2xl sm:flex sm:space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-gray-900/20"
+                                        class="mx-auto max-w-2xl my-8 sm:flex sm:space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-gray-900/20"
                                     >
                                         <div class="w-full pb-2 sm:pb-0">
                                             <label
@@ -178,7 +178,12 @@ const email = ref("");
                                         >
                                             <a
                                                 v-if="canRegister"
-                                                :href="route('register', { name: name, email: email })"
+                                                :href="
+                                                    route('register', {
+                                                        name: name,
+                                                        email: email,
+                                                    })
+                                                "
                                                 class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                                             >
                                                 Get started
