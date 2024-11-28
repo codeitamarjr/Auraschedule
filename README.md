@@ -1,5 +1,9 @@
 # Auraschedule
 
+<p align="center">
+<a href="https://github.com/codeitamarjr/Auraschedule/actions"><img src="https://github.com/codeitamarjr/Auraschedule/actions/workflows/test.yml/badge.svg" alt="Run Tests"></a>
+</p>
+
 ![Auraschedule](./public/landing-page-dark.png#gh-dark-mode-only)
 ![Auraschedule](./public/landing-page-light.png#gh-light-mode-only)
 
@@ -9,31 +13,31 @@ Auraschedule is a robust scheduling and subscription platform built using Larave
 
 ## Features
 
-- **Multi-Tenancy**: Auraschedule supports multiple tenants, powered by Spatie's Multitenancy package, allowing multiple businesses to share the platform.
-- **Subscription Plans**: Integrated with Stripe via Laravel Cashier for free and paid plans.
-- **Service Booking**: Businesses can offer both free and paid services.
-- **Vue.js Frontend**: Fully powered by Vue.js 3 with TypeScript for a seamless and modern user experience.
-- **Dynamic Routing**: Tighten's Ziggy for consistent frontend-backend route synchronization.
-- **Secure API Access**: Managed with Laravel Sanctum.
-- **Responsive UI**: Built with TailwindCSS for mobile-friendly layouts.
+-   **Multi-Tenancy**: Auraschedule supports multiple tenants, powered by Spatie's Multitenancy package, allowing multiple businesses to share the platform.
+-   **Subscription Plans**: Integrated with Stripe via Laravel Cashier for free and paid plans.
+-   **Service Booking**: Businesses can offer both free and paid services.
+-   **Vue.js Frontend**: Fully powered by Vue.js 3 with TypeScript for a seamless and modern user experience.
+-   **Dynamic Routing**: Tighten's Ziggy for consistent frontend-backend route synchronization.
+-   **Secure API Access**: Managed with Laravel Sanctum.
+-   **Responsive UI**: Built with TailwindCSS for mobile-friendly layouts.
 
 ## Tech Stack
 
-- **Backend**: Laravel 11
-- **Frontend**: Vue.js 3 with TypeScript, Inertia.js
-- **CSS Framework**: TailwindCSS
-- **Subscription**: Stripe (via Laravel Cashier)
-- **Multi-Tenancy**: Spatie Laravel Multitenancy
-- **Routing**: Tighten Ziggy
-- **Database**: MariaDB or SQLite(configured by default)
+-   **Backend**: Laravel 11
+-   **Frontend**: Vue.js 3 with TypeScript, Inertia.js
+-   **CSS Framework**: TailwindCSS
+-   **Subscription**: Stripe (via Laravel Cashier)
+-   **Multi-Tenancy**: Spatie Laravel Multitenancy
+-   **Routing**: Tighten Ziggy
+-   **Database**: MariaDB or SQLite(configured by default)
 
 ## Requirements
 
-- PHP ^8.2
-- Node.js ^16 and npm
-- Composer
-- MariaDB or SQLite
-- Stripe Account (for payment processing)
+-   PHP ^8.2
+-   Node.js ^16 and npm
+-   Composer
+-   MariaDB or SQLite
+-   Stripe Account (for payment processing)
 
 ### Setting Up Stripe Environment Variables
 
@@ -69,9 +73,9 @@ The frontend is built using Vue.js 3 with TypeScript and Inertia.js. The fronten
 
 #### Key Frontend Directories
 
-- `resources/js/Pages`: Contains Vue components for each page.
-- `resources/js/Layouts`: Shared layout components (e.g., AuthenticatedLayout.vue).
-- `resources/js/Components`: Reusable Vue components.
+-   `resources/js/Pages`: Contains Vue components for each page.
+-   `resources/js/Layouts`: Shared layout components (e.g., AuthenticatedLayout.vue).
+-   `resources/js/Components`: Reusable Vue components.
 
 #### Compiling Assets
 
@@ -95,11 +99,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-- [Laravel](https://laravel.com)
-- [Vue.js](https://vuejs.org)
-- [TailwindCSS](https://tailwindcss.com)
-- [Spatie Laravel Multitenancy](https://spatie.be/docs/laravel-multitenancy/v2/introduction)
-- [Laravel Cashier](https://laravel.com/docs/8.x/billing)
+-   [Laravel](https://laravel.com)
+-   [Vue.js](https://vuejs.org)
+-   [TailwindCSS](https://tailwindcss.com)
+-   [Spatie Laravel Multitenancy](https://spatie.be/docs/laravel-multitenancy/v2/introduction)
+-   [Laravel Cashier](https://laravel.com/docs/8.x/billing)
 
 ## Contact
 
