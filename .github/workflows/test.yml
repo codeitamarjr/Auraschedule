@@ -42,7 +42,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16 # Use your Node.js version
+          node-version: 23.3.0
 
       # Step 6: Cache Node.js Modules
       - name: Cache Node.js Modules
@@ -56,24 +56,20 @@ jobs:
       - name: Install Node.js Dependencies
         run: npm install
 
-      # Step 8: Build Assets
-      - name: Build Frontend Assets
-        run: npx vite build
-
-      # Step 9: Set up the .env file
+      # Step 8: Set up the .env file
       - name: Set up Environment
         run: cp .env.example .env
 
-      # Step 10: Generate Application Key
+      # Step 9: Generate Application Key
       - name: Generate Application Key
         run: php artisan key:generate
 
-      # Step 11: Configure Database (SQLite Example)
+      # Step 10: Configure Database (SQLite Example)
       - name: Set up Database
         run: |
           touch database/testing.sqlite
           php artisan migrate --env=testing
 
-      # Step 12: Run Tests
+      # Step 11: Run Tests
       - name: Run Tests
         run: composer test
