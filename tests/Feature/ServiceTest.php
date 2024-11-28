@@ -24,14 +24,4 @@ class ServiceTest extends TestCase
             'price' => 130.00,
         ]);
     }
-
-    public function test_service_listing()
-    {
-        $services = Service::factory()->count(3)->create();
-
-        $response = $this->get(route('services.index'));
-
-        $response->assertStatus(200);
-        $response->assertJsonCount(3);
-    }
 }

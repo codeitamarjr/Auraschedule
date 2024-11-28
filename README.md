@@ -77,6 +77,14 @@ The frontend is built using Vue.js 3 with TypeScript and Inertia.js. The fronten
 
 Run `npx vite build` to compile the frontend assets.
 
+### Testing
+
+Run the following command to run the tests:
+
+```bash
+composer test
+```
+
 ## Contribution
 
 This project is developed by Itamar Junior as a solo developer. Contributions are welcome via pull requests on GitHub.
