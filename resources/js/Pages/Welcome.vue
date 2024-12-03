@@ -9,7 +9,6 @@ defineProps<{
     totalUsers?: number;
 }>();
 
-// State for name and email
 const name = ref("");
 const email = ref("");
 </script>
