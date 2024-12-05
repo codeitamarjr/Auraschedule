@@ -160,75 +160,108 @@ const email = ref("");
                             <!-- End Avatar Group -->
 
                             <!-- Form -->
-                            <div v-if="!$page.props.auth.user">
-                                <form>
-                                    <div
-                                        class="mx-auto max-w-2xl my-8 sm:flex sm:space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-gray-900/20"
-                                    >
-                                        <div class="w-full pb-2 sm:pb-0">
-                                            <label
-                                                for="hs-hero-name-1"
-                                                class="block text-sm font-medium dark:text-white"
-                                                ><span class="sr-only"
-                                                    >Your name</span
-                                                ></label
-                                            >
-                                            <input
-                                                v-model="name"
-                                                type="text"
-                                                id="hs-hero-name-1"
-                                                class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                                placeholder="Your name"
-                                            />
-                                        </div>
+                            <div class="hidden md:block">
+                                <div v-if="!$page.props.auth.user">
+                                    <form>
                                         <div
-                                            class="pt-2 sm:pt-0 sm:ps-3 border-t border-gray-200 sm:border-t-0 sm:border-s w-full dark:border-neutral-700"
+                                            class="mx-auto max-w-2xl my-8 sm:flex sm:space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-gray-900/20"
                                         >
-                                            <label
-                                                for="hs-hero-email-1"
-                                                class="block text-sm font-medium dark:text-white"
-                                                ><span class="sr-only"
-                                                    >Your email address</span
-                                                ></label
+                                            <div class="w-full pb-2 sm:pb-0">
+                                                <label
+                                                    for="hs-hero-name-1"
+                                                    class="block text-sm font-medium dark:text-white"
+                                                    ><span class="sr-only"
+                                                        >Your name</span
+                                                    ></label
+                                                >
+                                                <input
+                                                    v-model="name"
+                                                    type="text"
+                                                    id="hs-hero-name-1"
+                                                    class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                                                    placeholder="Your name"
+                                                />
+                                            </div>
+                                            <div
+                                                class="pt-2 sm:pt-0 sm:ps-3 border-t border-gray-200 sm:border-t-0 sm:border-s w-full dark:border-neutral-700"
                                             >
-                                            <input
-                                                v-model="email"
-                                                type="email"
-                                                id="hs-hero-email-1"
-                                                class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
-                                                placeholder="Your email"
-                                            />
-                                        </div>
-                                        <div
-                                            class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block"
-                                        >
-                                            <a
-                                                v-if="canRegister"
-                                                :href="
-                                                    route('register', {
-                                                        name: name,
-                                                        email: email,
-                                                    })
-                                                "
-                                                class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                                <label
+                                                    for="hs-hero-email-1"
+                                                    class="block text-sm font-medium dark:text-white"
+                                                    ><span class="sr-only"
+                                                        >Your email
+                                                        address</span
+                                                    ></label
+                                                >
+                                                <input
+                                                    v-model="email"
+                                                    type="email"
+                                                    id="hs-hero-email-1"
+                                                    class="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-neutral-900 dark:border-transparent dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                                                    placeholder="Your email"
+                                                />
+                                            </div>
+                                            <div
+                                                class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block"
                                             >
-                                                Get started
-                                            </a>
-                                        </div>
-                                        <div
-                                            class="sm:ps-3 border-t border-gray-200 sm:border-t-0 sm:border-s whitespace-nowrap pt-2 sm:pt-0 grid sm:block"
-                                        >
-                                            <a
-                                                v-if="canLogin"
-                                                :href="route('login')"
-                                                class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-purple-600 text-white hover:bg-purple-700 focus:outline-none focus:bg-purple-700 disabled:opacity-50 disabled:pointer-events-none"
+                                                <a
+                                                    v-if="canRegister"
+                                                    :href="
+                                                        route('register', {
+                                                            name: name,
+                                                            email: email,
+                                                        })
+                                                    "
+                                                    class="mb-2 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                                >
+                                                    Get started
+                                                </a>
+                                            </div>
+                                            <div
+                                                class="sm:ps-3 border-t border-gray-200 sm:border-t-0 sm:border-s whitespace-nowrap pt-2 sm:pt-0 grid sm:block dark:border-neutral-700"
                                             >
-                                                Log in
-                                            </a>
+                                                <a
+                                                    v-if="canLogin"
+                                                    :href="route('login')"
+                                                    class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-purple-600 text-white hover:bg-purple-700 focus:outline-none focus:bg-purple-700 disabled:opacity-50 disabled:pointer-events-none"
+                                                >
+                                                    Log in
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
+
+                            <div class="md:hidden">
+                                <div
+                                    class="whitespace-nowrap pt-2 sm:pt-0 grid"
+                                >
+                                    <a
+                                        v-if="canRegister"
+                                        :href="
+                                            route('register', {
+                                                name: name,
+                                                email: email,
+                                            })
+                                        "
+                                        class="mb-2 py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+                                    >
+                                        Get started
+                                    </a>
+                                    <div
+                                        class="whitespace-nowrap pt-2 sm:pt-0 grid sm:block"
+                                    ></div>
+                                    <a
+                                        v-if="canLogin"
+                                        :href="route('login')"
+                                        class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-purple-600 text-white hover:bg-purple-700 focus:outline-none focus:bg-purple-700 disabled:opacity-50 disabled:pointer-events-none"
+                                    >
+                                        Log in
+                                    </a>
+                                </div>
+                            </div>
+
                             <!-- End Form -->
                         </div>
                     </div>
