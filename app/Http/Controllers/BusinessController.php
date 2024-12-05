@@ -37,7 +37,7 @@ class BusinessController extends Controller
         return Inertia::render('Business/Cancel');
     }
 
-    public function upgrade(Request $request)
+    public function store(Request $request)
     {
         $user = $request->user();
 
