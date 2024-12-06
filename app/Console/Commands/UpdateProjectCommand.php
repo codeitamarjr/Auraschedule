@@ -38,28 +38,29 @@ class UpdateProjectCommand extends Command
      */
     public function handle()
     {
+        $output = [];
         try {
             // Discard local changes
-            $this->executeShellCommand('git reset --hard');
+            $output[] = $this->executeShellCommand('git reset --hard');
 
             // Pull latest changes
-            $this->executeShellCommand('git pull');
+            $output[] = $this->executeShellCommand('git pull');
 
             // Run migrations
-            $this->executeShellCommand('php artisan migrate --force');
+            $output[] = $this->executeShellCommand('php artisan migrate --force');
 
             // Update Composer dependencies
-            $this->executeShellCommand('composer install --no-interaction --optimize-autoloader');
+            $output[] = $this->executeShellCommand('composer install --no-interaction --optimize-autoloader');
 
             // Run NPM build
-            $this->executeShellCommand('npm install && npx vite build');
+            $output[] = $this->executeShellCommand('npm install && npx vite build');
 
             // Log success
             Log::info('Project updated successfully.');
 
             // Send notification
             Notification::route('mail', 'hello@itjunior.dev')
-                ->notify(new ProjectUpdateNotification('Project updated successfully.'));
+                ->notify(new ProjectUpdateNotification('Project updated successfully. Details: ' . PHP_EOL . implode(PHP_EOL, $output)));
 
             $this->info('Project updated successfully.');
         } catch (\Exception $e) {
