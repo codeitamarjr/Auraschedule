@@ -37,13 +37,13 @@ class UpdateProjectCommand extends Command
         $output = [];
         try {
             // Execute all steps and capture output
-            $output[] = $this->executeShellCommand('git reset --hard');
-            $output[] = $this->executeShellCommand('git pull');
-            $output[] = $this->executeShellCommand('php artisan migrate --force');
-            $output[] = $this->executeShellCommand('composer install --no-interaction --optimize-autoloader');
-            $output[] = $this->executeShellCommand('npm install && npx vite build');
+            $output[] = $this->formatOutput('git reset --hard', $this->executeShellCommand('git reset --hard'));
+            $output[] = $this->formatOutput('git pull', $this->executeShellCommand('git pull'));
+            $output[] = $this->formatOutput('php artisan migrate --force', $this->executeShellCommand('php artisan migrate --force'));
+            $output[] = $this->formatOutput('composer install', $this->executeShellCommand('composer install --no-interaction --optimize-autoloader'));
+            $output[] = $this->formatOutput('npm build', $this->executeShellCommand('npm install && npx vite build'));
 
-            $outputMessage = implode("\n", $output);
+            $outputMessage = implode(PHP_EOL, $output);
 
             // Log success
             Log::info('Project updated successfully.');
@@ -89,5 +89,19 @@ class UpdateProjectCommand extends Command
 
         // Return standard output
         return $process->getOutput();
+    }
+
+    /**
+     * Formats the output of a command by adding a prefix for clarity and splitting lines.
+     *
+     * @param string $command The command being executed.
+     * @param string $output The raw output of the command.
+     * @return string The formatted output.
+     */
+    private function formatOutput($command, $output)
+    {
+        $lines = explode("\n", trim($output)); // Split by newlines and remove trailing whitespace
+        $formattedLines = array_map(fn($line) => "[{$command}] $line", $lines); // Add a prefix for each line
+        return implode(PHP_EOL, $formattedLines); // Join formatted lines with line breaks
     }
 }
