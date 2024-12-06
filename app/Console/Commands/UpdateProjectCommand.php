@@ -52,7 +52,7 @@ class UpdateProjectCommand extends Command
             $this->executeShellCommand('composer install --no-interaction --optimize-autoloader');
 
             // Run NPM build
-            $this->executeShellCommand('npm install && npm run build');
+            $this->executeShellCommand('npm install && npx vite build');
 
             // Log success
             Log::info('Project updated successfully.');
