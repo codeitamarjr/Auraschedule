@@ -23,44 +23,34 @@ class UpdateProjectCommand extends Command
      */
     protected $description = 'Update project by pulling latest changes, running migrations, updating dependencies, and building assets';
 
-
     /**
      * Execute the console command.
      *
-     * This command will update the project by pulling latest changes, running migrations,
-     * updating dependencies, and building assets.
+     * This command will update the project by pulling latest changes, running migrations, updating dependencies, and building assets.
+     * It will log the output of each step and send a notification with the result.
+     * If any step fails, it will log the error and send a notification with the error message.
      *
-     * It will also log the result of the update and send a notification to the admin
-     * with the result of the update.
-     *
-     * If the update fails, it will log the error and send a notification to the admin
-     * with the error message.
+     * @return void
      */
     public function handle()
     {
         $output = [];
         try {
-            // Discard local changes
+            // Execute all steps and capture output
             $output[] = $this->executeShellCommand('git reset --hard');
-
-            // Pull latest changes
             $output[] = $this->executeShellCommand('git pull');
-
-            // Run migrations
             $output[] = $this->executeShellCommand('php artisan migrate --force');
-
-            // Update Composer dependencies
             $output[] = $this->executeShellCommand('composer install --no-interaction --optimize-autoloader');
-
-            // Run NPM build
             $output[] = $this->executeShellCommand('npm install && npx vite build');
+
+            $outputMessage = implode(PHP_EOL, $output);
 
             // Log success
             Log::info('Project updated successfully.');
 
             // Send notification
             Notification::route('mail', 'hello@itjunior.dev')
-                ->notify(new ProjectUpdateNotification('Project updated successfully. Details: ' . PHP_EOL . implode(PHP_EOL, $output)));
+                ->notify(new ProjectUpdateNotification("Project updated successfully:\n" . $outputMessage));
 
             $this->info('Project updated successfully.');
         } catch (\Exception $e) {
@@ -75,12 +65,16 @@ class UpdateProjectCommand extends Command
         }
     }
 
+
     /**
-     * Executes a shell command using Symfony's Process component.
+     * Executes a shell command and returns its standard output.
+     *
+     * This method runs a shell command using Symfony's Process component with a timeout of 300 seconds.
+     * If the command fails, it throws a RuntimeException with the error output.
      *
      * @param string $command The shell command to execute.
-     * 
-     * @throws \RuntimeException If the command execution fails.
+     * @return string The standard output of the executed command.
+     * @throws \RuntimeException if the command execution fails.
      */
     private function executeShellCommand($command)
     {
@@ -89,9 +83,11 @@ class UpdateProjectCommand extends Command
         $process->run();
 
         if (!$process->isSuccessful()) {
-            throw new \RuntimeException($process->getErrorOutput());
+            $errorOutput = $process->getErrorOutput();
+            throw new \RuntimeException($errorOutput ?: 'Command failed with unknown error.');
         }
 
-        $this->info($process->getOutput());
+        // Return standard output
+        return $process->getOutput();
     }
 }
