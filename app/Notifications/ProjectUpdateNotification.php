@@ -38,7 +38,7 @@ class ProjectUpdateNotification extends Notification
     {
         return (new MailMessage)
             ->subject('Project Update Status')
-            ->line(nl2br(e($this->message)))
+            ->line($this->message)
             ->line('Thank you for using our application!');
     }
 
