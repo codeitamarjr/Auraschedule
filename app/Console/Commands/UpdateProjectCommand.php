@@ -43,7 +43,7 @@ class UpdateProjectCommand extends Command
             $output[] = $this->executeShellCommand('composer install --no-interaction --optimize-autoloader');
             $output[] = $this->executeShellCommand('npm install && npx vite build');
 
-            $outputMessage = implode(PHP_EOL, $output);
+            $outputMessage = implode("\n", $output);
 
             // Log success
             Log::info('Project updated successfully.');
