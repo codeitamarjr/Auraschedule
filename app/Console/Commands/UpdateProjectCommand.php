@@ -44,6 +44,7 @@ class UpdateProjectCommand extends Command
             $output[] = $this->formatOutput('npm build', $this->executeShellCommand('npm install && npx vite build'));
 
             $outputMessage = implode(PHP_EOL, $output);
+            $outputMessage = preg_replace('/\e[[][A-Za-z0-9];?[0-9]*m/', '', $outputMessage);
 
             // Log success
             Log::info('Project updated successfully.');
