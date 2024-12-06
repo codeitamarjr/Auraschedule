@@ -44,14 +44,7 @@ class UpdateProjectCommand extends Command
             $output[] = $this->formatOutput('npm build', $this->executeShellCommand('npm install && npx vite build'));
 
             $outputMessage = implode(PHP_EOL, $output);
-            // Remove ANSI escape sequences and replace status markers with emojis
-            $outputMessage = preg_replace([
-                '/\e[[][A-Za-z0-9];?[0-9]*m/', // Remove ANSI escape sequences
-                '/DONE/'                        // Replace "DONE" with ✅ emoji
-            ], [
-                '', // Replace ANSI codes with nothing
-                '✅' // Replace "DONE" with a checkmark emoji
-            ], $outputMessage);
+            $outputMessage = preg_replace('/\e[[][A-Za-z0-9];?[0-9]*m/', '', $outputMessage);
 
             // Log success
             Log::info('Project updated successfully.');
