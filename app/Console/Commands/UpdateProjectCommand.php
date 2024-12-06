@@ -100,8 +100,8 @@ class UpdateProjectCommand extends Command
      */
     private function formatOutput($command, $output)
     {
-        $lines = explode("\n", trim($output)); // Split by newlines and remove trailing whitespace
-        $formattedLines = array_map(fn($line) => "[{$command}] $line", $lines); // Add a prefix for each line
-        return implode(PHP_EOL, $formattedLines); // Join formatted lines with line breaks
+        $lines = explode("\n", trim($output));
+        $formattedLines = array_map(fn($line) => "[{$command}] $line", $lines);
+        return PHP_EOL . implode(PHP_EOL, $formattedLines) . PHP_EOL . PHP_EOL;
     }
 }
