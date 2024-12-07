@@ -35,7 +35,9 @@ const props = defineProps<Props>();
                         title="Upgrade to a Business Account"
                         class="relative inline-flex items-center justify-center px-8 py-2 text-md font-bold text-white transition-all duration-200 dark:bg-gray-900 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                     >
-                        Upgrade to a Business Account
+                        Upgrade<span class="hidden md:block">
+                            to a Business Accounts</span
+                        >
                     </a>
                 </div>
             </div>
@@ -52,7 +54,8 @@ const props = defineProps<Props>();
                             v-if="!isBusinessAccount"
                             class="block mt-2 text-sm text-gray-500 dark:text-gray-400"
                         >
-                            To use the Business Dashboard, please upgrade to a Business Account.
+                            To use the Business Dashboard, please upgrade to a
+                            Business Account.
                         </span>
                     </div>
                 </div>
