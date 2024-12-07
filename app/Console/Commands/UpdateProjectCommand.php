@@ -41,6 +41,7 @@ class UpdateProjectCommand extends Command
             $output[] = $this->formatOutput('git pull', $this->executeShellCommand('git pull'));
             $output[] = $this->formatOutput('php artisan migrate --force', $this->executeShellCommand('php artisan migrate --force'));
             $output[] = $this->formatOutput('composer install', $this->executeShellCommand('composer install --no-interaction --optimize-autoloader'));
+            $output[] = $this->formatOutput('php artisan optimize', $this->executeShellCommand('php artisan optimize'));
             $output[] = $this->formatOutput('npm build', $this->executeShellCommand('npm install && npx vite build'));
 
             $outputMessage = implode(PHP_EOL, $output);
