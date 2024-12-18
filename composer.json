@@ -10,7 +10,6 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "codeitamarjr/laravel-appointments": "dev-master",
         "inertiajs/inertia-laravel": "^1.0",
         "laravel/cashier": "^15.5",
         "laravel/framework": "^11.31",

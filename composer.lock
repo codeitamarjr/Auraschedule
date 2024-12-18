@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "824e4ded7fe858e995073dacdfbc5ac3",
+    "content-hash": "0bb384a1b7b16a4b8a6695161edd659d",
     "packages": [
         {
             "name": "brick/math",
@@ -134,75 +134,6 @@
                 }
             ],
             "time": "2024-02-09T16:56:22+00:00"
-        },
-        {
-            "name": "codeitamarjr/laravel-appointments",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/codeitamarjr/laravel-appointments.git",
-                "reference": "5632099e96b6402b95eb980c0c487dc90e7562a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/codeitamarjr/laravel-appointments/zipball/5632099e96b6402b95eb980c0c487dc90e7562a7",
-                "reference": "5632099e96b6402b95eb980c0c487dc90e7562a7",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "^11.0",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.5",
-                "phpunit/phpunit": "^10.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Codeitamarjr\\LaravelAppoint\\AppointServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Codeitamarjr\\LaravelAppoint\\": "src/"
-                },
-                "classmap": [
-                    "database/migrations",
-                    "database/seeders",
-                    "database/factories",
-                    "Http/controllers",
-                    "Models"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Itamar Junior",
-                    "email": "hello@itjunior.dev"
-                }
-            ],
-            "description": "A Laravel package for managing events, time slots, and appointments with features like unlimited attendees, time-framed slots, and notification management.",
-            "homepage": "https://github.com/codeitamarjr/laravel-appoint",
-            "keywords": [
-                "appointments",
-                "events",
-                "laravel",
-                "package",
-                "scheduler",
-                "time slots"
-            ],
-            "support": {
-                "issues": "https://github.com/codeitamarjr/laravel-appoint/issues",
-                "source": "https://github.com/codeitamarjr/laravel-appoint"
-            },
-            "time": "2024-12-18T11:18:17+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -8870,9 +8801,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "codeitamarjr/laravel-appointments": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
