@@ -71,7 +71,7 @@ const email = ref("");
                                     class="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight dark:text-neutral-200"
                                 >
                                     Seamlessly
-                                    <span class="text-blue-500">
+                                    <span class="text-blue-500 whitespace-nowrap">
                                         create, list, and grow🚀</span
                                     >
                                 </h1>

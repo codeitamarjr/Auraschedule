@@ -2,24 +2,23 @@
 
 namespace Database\Seeders;
 
-use App\Models\Business;
 use App\Models\User;
-use App\Models\Tenant;
+use App\Models\Business;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class TenantSeeder extends Seeder
+class BusinessSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $businesses = Business::all();
+        $users = User::all();
 
-        foreach ($businesses as $business) {
-            Tenant::factory(1)->create([
-                'business_id' => $business->id,
+        foreach ($users as $user) {
+            Business::factory(5)->create([
+                'user_id' => $user->id,
             ]);
         }
     }

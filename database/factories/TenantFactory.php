@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\User;
+use App\Models\Business;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,9 +19,10 @@ class TenantFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => User::factory(),
+            'business_id' => Business::factory(),
+            'uuid' => $this->faker->uuid,
             'name' => 'Business Two',
-            'domain' => $this->faker->unique()->word() . '.auraschedule.test'
+            'subdomain' => $this->faker->unique()->word() . '.auraschedule.test'
         ];
     }
 }

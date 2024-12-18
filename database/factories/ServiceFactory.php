@@ -19,6 +19,7 @@ class ServiceFactory extends Factory
     {
         return [
             'tenant_id' => Tenant::factory(),
+            'uuid' => $this->faker->uuid,
             'name' => $this->faker->sentence(5),
             'description' => $this->faker->paragraph(),
             'duration' => $this->faker->randomElement([60, 90, 120]), // Random duration between 60, 90, 120

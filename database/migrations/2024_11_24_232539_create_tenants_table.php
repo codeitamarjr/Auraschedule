@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('tenants', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // User who owns the tenant
+            $table->foreignId('business_id')->constrained()->onDelete('cascade');
 
+            $table->uuid('uuid')->unique()->index();
             $table->string('name'); // Tenant's business name
-            $table->string('domain')->unique(); // Domain for the tenant
+            $table->string('subdomain')->unique(); // subdomain for the tenant
         });
     }
 

@@ -4,13 +4,14 @@ import { Head, useForm } from "@inertiajs/vue3";
 
 const form = useForm({
     business_name: "",
+    business_subdomain: "",
     tax_id: "",
     contact_email: "",
     phone: "",
 });
 
 const submit = () => {
-    form.post(route("business.upgrade"), {
+    form.post(route("business.store"), {
     });
 };
 </script>
@@ -44,6 +45,19 @@ const submit = () => {
                         <input
                             type="text"
                             v-model="form.business_name"
+                            class="mt-1 block w-full border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
+                            required
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                        >
+                            Business Subdomain
+                        </label>
+                        <input
+                            type="text"
+                            v-model="form.business_subdomain"
                             class="mt-1 block w-full border-gray-300 rounded-md shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:text-gray-300"
                             required
                         />

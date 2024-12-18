@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Laravel\Cashier\Billable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Cashier\Billable;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -49,13 +50,8 @@ class User extends Authenticatable implements MustVerifyEmail
         ];
     }
 
-    public function business()
+    public function business(): HasMany
     {
-        return $this->hasOne(Business::class);
-    }
-
-    public function tenants(): HasMany
-    {
-        return $this->hasMany(Tenant::class);
+        return $this->hasMany(Business::class);
     }
 }

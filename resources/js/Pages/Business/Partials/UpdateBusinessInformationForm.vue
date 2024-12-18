@@ -9,6 +9,7 @@ import InputError from "@/Components/InputError.vue";
 interface Business {
     id: number;
     business_name: string;
+    business_subdomain: string;
     tax_id: string;
     contact_email: string;
     phone: string;
@@ -20,6 +21,7 @@ const props = defineProps<{
 
 const form = useForm({
     business_name: props.business.business_name,
+    business_subdomain: props.business.business_subdomain,
     tax_id: props.business.tax_id,
     contact_email: props.business.contact_email,
     phone: props.business.phone,
@@ -54,6 +56,19 @@ const submitForm = () => {
                     autocomplete="name"
                 />
                 <InputError class="mt-2" :message="form.errors.business_name" />
+            </div>
+            <div>
+                <InputLabel for="subdomain" value="subdomain" />
+                <TextInput
+                    id="subdomain"
+                    type="text"
+                    class="mt-1 block w-full"
+                    v-model="form.business_subdomain"
+                    required
+                    autofocus
+                    autocomplete="subdomain"
+                />
+                <InputError class="mt-2" :message="form.errors.business_subdomain" />
             </div>
 
             <div>

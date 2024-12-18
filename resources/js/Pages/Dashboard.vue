@@ -36,7 +36,7 @@ const props = defineProps<Props>();
                         class="relative inline-flex items-center justify-center px-8 py-2 text-md font-bold text-white transition-all duration-200 dark:bg-gray-900 bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                     >
                         Upgrade<span class="hidden md:block">
-                            to a Business Accounts</span
+                            &nbsp;to a Business Accounts</span
                         >
                     </a>
                 </div>

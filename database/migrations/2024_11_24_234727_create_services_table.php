@@ -12,10 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->timestamps();
             $table->foreignId('tenant_id')->constrained()->onDelete('cascade');
 
+            $table->uuid('uuid')->unique()->index();
             $table->string('name');
             $table->text('description')->nullable();
             $table->integer('duration'); // e.g., time in minutes (60, 90, 120)
