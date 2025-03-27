@@ -93,6 +93,7 @@ class BusinessController extends Controller
     {
         $user = Auth::user();
         $business = $user->business;
+        dd($business);
 
         $data = $request->validate([
             'business_name' => 'required|string|max:255',

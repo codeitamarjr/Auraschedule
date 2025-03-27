@@ -14,9 +14,10 @@ const email = ref("");
 </script>
 
 <template>
-    <Head title="Welcome to Auraschedule" />
+    <Head title="Welcome to Aura Schedule" />
 
     <AnnouncementBanner
+        v-if="canLogin"
         title="Close beta"
         subtitle="Sign up for early access"
         route="register"
@@ -71,7 +72,9 @@ const email = ref("");
                                     class="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight dark:text-neutral-200"
                                 >
                                     Seamlessly
-                                    <span class="text-blue-500 whitespace-nowrap">
+                                    <span
+                                        class="text-blue-500 whitespace-nowrap"
+                                    >
                                         create, list, and grow🚀</span
                                     >
                                 </h1>

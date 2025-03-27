@@ -64,7 +64,7 @@ defineProps({
                             <p
                                 class="mt-2 text-sm text-gray-500 dark:text-neutral-500"
                             >
-                                You can start with a basic plan
+                                You can test and start with a basic plan.
                             </p>
 
                             <ul class="mt-7 space-y-2.5 text-sm">
@@ -86,7 +86,7 @@ defineProps({
                                     <span
                                         class="text-gray-800 dark:text-neutral-400"
                                     >
-                                        Landing Page
+                                        Custom Landing Page
                                     </span>
                                 </li>
 
@@ -108,7 +108,7 @@ defineProps({
                                     <span
                                         class="text-gray-800 dark:text-neutral-400"
                                     >
-                                        Free services
+                                        List Free Services
                                     </span>
                                 </li>
 
@@ -130,7 +130,7 @@ defineProps({
                                     <span
                                         class="text-gray-800 dark:text-neutral-400"
                                     >
-                                        Product support
+                                        On-line Support
                                     </span>
                                 </li>
                             </ul>
@@ -172,7 +172,8 @@ defineProps({
                             <p
                                 class="mt-2 text-sm text-gray-500 dark:text-neutral-500"
                             >
-                                All the basics for starting a new business
+                                Elevate your business and charge for your
+                                services, accepting card payments.
                             </p>
 
                             <ul class="mt-7 space-y-2.5 text-sm">
@@ -194,7 +195,7 @@ defineProps({
                                     <span
                                         class="text-gray-800 dark:text-neutral-400"
                                     >
-                                        Landing Page
+                                        All the Basic Plan's features
                                     </span>
                                 </li>
 
@@ -216,7 +217,7 @@ defineProps({
                                     <span
                                         class="text-gray-800 dark:text-neutral-400"
                                     >
-                                        Paid services
+                                        List Paid Services
                                     </span>
                                 </li>
 
@@ -238,7 +239,7 @@ defineProps({
                                     <span
                                         class="text-gray-800 dark:text-neutral-400"
                                     >
-                                        Product support
+                                        Accept Card Payments
                                     </span>
                                 </li>
                             </ul>
@@ -277,7 +278,7 @@ defineProps({
                             <p
                                 class="mt-2 text-sm text-gray-500 dark:text-neutral-500"
                             >
-                                Everything you need for a growing business
+                                The ultimate plan for your business.
                             </p>
 
                             <ul class="mt-7 space-y-2.5 text-sm">
@@ -299,7 +300,7 @@ defineProps({
                                     <span
                                         class="text-gray-800 dark:text-neutral-400"
                                     >
-                                        Landing Page
+                                        All the Pro Plan's features
                                     </span>
                                 </li>
 
@@ -321,7 +322,7 @@ defineProps({
                                     <span
                                         class="text-gray-800 dark:text-neutral-400"
                                     >
-                                        Paid Events
+                                        Real-time Notifications
                                     </span>
                                 </li>
 
@@ -343,29 +344,7 @@ defineProps({
                                     <span
                                         class="text-gray-800 dark:text-neutral-400"
                                     >
-                                        Accept Card Payments
-                                    </span>
-                                </li>
-
-                                <li class="flex gap-x-2">
-                                    <svg
-                                        class="shrink-0 mt-0.5 size-4 text-blue-600 dark:text-blue-500"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    >
-                                        <polyline points="20 6 9 17 4 12" />
-                                    </svg>
-                                    <span
-                                        class="text-gray-800 dark:text-neutral-400"
-                                    >
-                                        Product support
+                                        Account Integration
                                     </span>
                                 </li>
                             </ul>
@@ -380,234 +359,6 @@ defineProps({
                         <!-- End Card -->
                     </div>
                     <!-- End Grid -->
-
-                    <!-- Comparison table -->
-                    <div class="mt-20 lg:mt-32">
-                        <div class="lg:text-center mb-10 lg:mb-20">
-                            <h3 class="text-2xl font-semibold dark:text-white">
-                                Compare plans
-                            </h3>
-                        </div>
-                        <!-- lg+ -->
-                        <div class="">
-                            <table class="w-full h-px">
-                                <caption class="sr-only">
-                                    Pricing plan comparison
-                                </caption>
-                                <thead
-                                    class="sticky top-0 inset-x-0 bg-white dark:bg-neutral-900"
-                                >
-                                    <tr>
-                                        <th
-                                            class="py-4 ps-6 pe-6 text-sm font-medium text-gray-800 text-start"
-                                            scope="col"
-                                        >
-                                            <span class="sr-only"
-                                                >Feature by</span
-                                            >
-                                            <span class="dark:text-white"
-                                                >Plans</span
-                                            >
-                                        </th>
-
-                                        <th
-                                            class="w-1/4 py-4 px-6 text-lg leading-6 font-medium text-gray-800 text-center dark:text-white"
-                                            scope="col"
-                                        >
-                                            Basic Plan
-                                        </th>
-                                        <th
-                                            class="w-1/4 py-4 px-6 text-lg leading-6 font-medium text-gray-800 text-center dark:text-white"
-                                            scope="col"
-                                        >
-                                            Startup
-                                        </th>
-                                        <th
-                                            class="w-1/4 py-4 px-6 text-lg leading-6 font-medium text-gray-800 text-center dark:text-white"
-                                            scope="col"
-                                        >
-                                            Team
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody
-                                    class="border-t border-gray-200 divide-y divide-gray-200 dark:border-neutral-700 dark:divide-neutral-700"
-                                >
-                                    <tr>
-                                        <th
-                                            class="py-3 ps-6 bg-gray-50 font-bold text-gray-800 text-start dark:bg-neutral-800 dark:text-white"
-                                            colspan="5"
-                                            scope="colgroup"
-                                        >
-                                            Services Offered
-                                        </th>
-                                    </tr>
-
-                                    <tr>
-                                        <th
-                                            class="py-5 ps-6 pe-6 text-sm font-normal text-gray-600 text-start whitespace-nowrap dark:text-neutral-400"
-                                            scope="row"
-                                        >
-                                            Open/High/Low/Close
-                                        </th>
-
-                                        <td class="py-5 px-6">
-                                            <!-- Check -->
-                                            <svg
-                                                class="mx-auto shrink-0 size-5 text-blue-600 dark:text-blue-500"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            >
-                                                <polyline
-                                                    points="20 6 9 17 4 12"
-                                                />
-                                            </svg>
-                                            <!-- End Solid Check -->
-                                            <span class="sr-only"
-                                                >Included in Free</span
-                                            >
-                                        </td>
-
-                                        <td class="py-5 px-6">
-                                            <!-- Check -->
-                                            <svg
-                                                class="mx-auto shrink-0 size-5 text-blue-600 dark:text-blue-500"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            >
-                                                <polyline
-                                                    points="20 6 9 17 4 12"
-                                                />
-                                            </svg>
-                                            <!-- End Solid Check -->
-                                            <span class="sr-only"
-                                                >Included in Startup</span
-                                            >
-                                        </td>
-
-                                        <td class="py-5 px-6">
-                                            <!-- Check -->
-                                            <svg
-                                                class="mx-auto shrink-0 size-5 text-blue-600 dark:text-blue-500"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            >
-                                                <polyline
-                                                    points="20 6 9 17 4 12"
-                                                />
-                                            </svg>
-                                            <!-- End Solid Check -->
-                                            <span class="sr-only"
-                                                >Included in Team</span
-                                            >
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <th
-                                            class="py-5 ps-6 pe-6 text-sm font-normal text-gray-600 text-start whitespace-nowrap dark:text-neutral-400"
-                                            scope="row"
-                                        >
-                                            Price-volume difference indicator
-                                        </th>
-
-                                        <td class="py-5 px-6">
-                                            <!-- Minus -->
-                                            <svg
-                                                class="mx-auto shrink-0 size-5 text-gray-400 dark:text-neutral-600"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            >
-                                                <path d="M5 12h14" />
-                                            </svg>
-                                            <!-- Minus -->
-                                            <span class="sr-only"
-                                                >Not included in Free</span
-                                            >
-                                        </td>
-
-                                        <td class="py-5 px-6">
-                                            <!-- Check -->
-                                            <svg
-                                                class="mx-auto shrink-0 size-5 text-blue-600 dark:text-blue-500"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            >
-                                                <polyline
-                                                    points="20 6 9 17 4 12"
-                                                />
-                                            </svg>
-                                            <!-- End Solid Check -->
-                                            <span class="sr-only"
-                                                >Included in Startup</span
-                                            >
-                                        </td>
-
-                                        <td class="py-5 px-6">
-                                            <!-- Check -->
-                                            <svg
-                                                class="mx-auto shrink-0 size-5 text-blue-600 dark:text-blue-500"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                            >
-                                                <polyline
-                                                    points="20 6 9 17 4 12"
-                                                />
-                                            </svg>
-                                            <!-- End Solid Check -->
-                                            <span class="sr-only"
-                                                >Included in Team</span
-                                            >
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- End lg+ -->
-                    </div>
-                    <!-- End Comparison table -->
                 </div>
                 <!-- End Pricing -->
             </div>
